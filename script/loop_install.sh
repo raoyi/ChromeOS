@@ -19,5 +19,5 @@ echo "[`date`] install $i times end" >> ${LOG_FILE};
 echo "you can press ctrl+C to stop, and umount usb disk in 1 mins."
 sleep 1m
 clear
-sleep 10s
+sleep 5s
 done
