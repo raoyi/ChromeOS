@@ -1,3 +1,6 @@
-[Chromebook键盘快捷键](ChromebookShortcutKeys.md) 源地址：https://support.google.com/chromebook/answer/183101?hl=zh-Hans
+# Document List
 
-Chrome浏览器的100个小技巧 为第三方文档，未验证
+**ChromebookShortcutKeys.md** - Chromebook shortcut keys via offical website. [[PDF](./ChromebookShortcutKeys.pdf)]
+
+**Chrome100Tips.pdf** - third-part document, not validated.
+
