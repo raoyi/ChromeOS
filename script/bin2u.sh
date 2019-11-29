@@ -5,7 +5,7 @@
 # USED FOR CREATE CHROMEOS-INSTALL U-DISK IN LINUX.
 # Usage:
 # run script in Linux Terminal,
-# type the binary file path as the first parameter.
+# use the binary file path as the first parameter.
 
 echo "please choose u-disk volume..."
 var=$(ls /dev/sd[a-p])
