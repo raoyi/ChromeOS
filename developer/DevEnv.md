@@ -19,10 +19,12 @@ sudo apt-get install git-core gitk git-gui curl lvm2 thin-provisioning-tools \
 
 clone depot_tools
 ```
+(outside)
 git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
 ```
 运行命令（假设depot_tools被clone到/path/to/depot_tools路径）
 ```
+(outside)
 export PATH=$PATH:/path/to/depot_tools
 ```
 并把以上命令添加到 `~/.bashrc` 文件末尾
@@ -31,6 +33,7 @@ export PATH=$PATH:/path/to/depot_tools
 
 复制以下命令并运行
 ```
+(outside)
 cd /tmp
 cat > ./sudo_editor <<EOF
 #!/bin/sh
@@ -66,13 +69,15 @@ git config --global user.name "Your Name"
 
 ### step5. 再次确认系统位元（非必要）
 ```
-(outside) uname -m
+(outside)
+uname -m
 ```
 显示结果：x86_64
 
 ### step6. 设置默认权限
 ```
-(outside) umask 022
+(outside)
+umask 022
 ```
 
 ### step7. 确认默认权限（非必要）
@@ -85,7 +90,8 @@ ls -la ~/foo
 
 ### step8. 获取源码
 ```
-(outside) mkdir -p ${HOME}/chromiumos
+(outside)
+mkdir -p ${HOME}/chromiumos
 cd ${HOME}/chromiumos
 repo init -u https://chromium.googlesource.com/chromiumos/manifest.git --repo-url https://chromium.googlesource.com/external/repo.git
 repo sync -j4
