@@ -6,9 +6,9 @@
 
 **stress_tool** - auto-stress tool.
 
-	**stress_auto.sh** - auto stress main file.
+**stress_tool/stress_auto.sh** - auto stress main file.
 
-	**cold_boot.sh** - auto cold-boot script.
+**stress_tool/cold_boot.sh** - auto cold-boot script.
 
-	**cold_boot.conf** - cold-boot configure file.
+**stress_tool/cold_boot.conf** - cold-boot configure file.
 
