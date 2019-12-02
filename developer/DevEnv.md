@@ -29,7 +29,7 @@ export PATH=$PATH:/path/to/depot_tools
 ```
 并把以上命令添加到 `~/.bashrc` 文件末尾
 
-### step3. Making sudo a little more permissive~~（存疑）~~
+### step3. Making sudo a little more permissive ~~（存疑）~~
 
 ~~复制以下命令并运行~~
 ```
