@@ -29,9 +29,9 @@ export PATH=$PATH:/path/to/depot_tools
 ```
 并把以上命令添加到 `~/.bashrc` 文件末尾
 
-### step3. Making sudo a little more permissive（存疑）
+### step3. Making sudo a little more permissive~~（存疑）~~
 
-复制以下命令并运行
+~~复制以下命令并运行~~
 ```
 (outside)
 cd /tmp
@@ -43,24 +43,22 @@ EOF
 chmod +x ./sudo_editor
 sudo EDITOR=./sudo_editor visudo -f /etc/sudoers.d/relax_requirements
 ```
+**这一步按照官网文档执行似乎有问题，做如下修改验证：（验证PASS）**
+```
+sudo cat /etc/sudoers
+```
+可以看到sudoers文件内容（必须sudo）
+```
+sudo visudo
+```
+加上两行：
+```
+Defaults !tty_tickets
+Defaults timestamp_timeout=180
+```
+屏幕下方提示的符号^为Ctrl
 
->这一步似乎有错，做如下修改验证：
->
->sudo cat /etc/sudoers
->
->可以看到sudoers文件内容（必须sudo）
->
->sudo visudo
->
->加上两行：
->
->Defaults !tty_tickets
->
->Defaults timestamp_timeout=180
->
->屏幕下方提示的符号^为Ctrl
->
->修改完成后保存，随后重启
+修改完成后保存，随后重启
 
 ### step4. Git配置
 ```
@@ -97,4 +95,10 @@ mkdir -p ${HOME}/chromiumos
 cd ${HOME}/chromiumos
 repo init -u https://chromium.googlesource.com/chromiumos/manifest.git --repo-url https://chromium.googlesource.com/external/repo.git
 repo sync -j4
+```
+
+### step9. END
+```
+(outside)
+cros_sdk
 ```
