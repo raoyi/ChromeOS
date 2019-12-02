@@ -45,16 +45,16 @@ sudo EDITOR=./sudo_editor visudo -f /etc/sudoers.d/relax_requirements
 ```
 **这一步按照官网文档执行似乎有问题，做如下修改验证：（验证PASS）**
 ```
-sudo cat /etc/sudoers
+sudo cat /etc/sudoers    #可以看到sudoers文件内容（必须sudo）
 ```
-可以看到sudoers文件内容（必须sudo）
+打开sudoers文件准备修改：
 ```
 sudo visudo
 ```
 加上两行：
 ```
-Defaults !tty_tickets
-Defaults timestamp_timeout=180
+Defaults !tty_tickets    #空白字符为Tab
+Defaults timestamp_timeout=180     #空白字符为Tab
 ```
 屏幕下方提示的符号^为Ctrl
 
