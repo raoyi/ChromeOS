@@ -59,6 +59,8 @@ sudo EDITOR=./sudo_editor visudo -f /etc/sudoers.d/relax_requirements
 >Defaults timestamp_timeout=180
 >
 >屏幕下方提示的符号^为Ctrl
+>
+>修改完成后保存，随后重启
 
 ### step4. Git配置
 ```
