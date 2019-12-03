@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Author: RaoYi
 # Email: hi@raoyi.net
@@ -9,15 +9,28 @@
 
 LOG_FILE="/usr/local/osinstall.log"
 
+trap 'onCtrlC' INT
+function onCtrlC () {
+  echo -e '\nyou can umount u-disk now...'
+  exit 0
+}
+
 read -p "Now input the install times:" ins_times
 
 for i in `seq 1 $ins_times`
-do
-echo "[`date`] install $i times start" >> ${LOG_FILE};
-chromeos-install --yes
-echo "[`date`] install $i times end" >> ${LOG_FILE};
-echo "you can press ctrl+C to stop, and umount usb disk in 1 mins."
-sleep 1m
-clear
-sleep 5s
+  do
+  echo "[`date`] install $i times start" >> ${LOG_FILE};
+  chromeos-install --yes
+  echo "[`date`] install $i times end" >> ${LOG_FILE};
+  wait_sec=30
+  echo "you can press ctrl+C to stop in ${wait_sec} seconds."
+  tput sc
+  while [ $wait_sec -gt 0 ]
+    do
+    echo -n $wait_sec
+    sleep 1
+    let "wait_sec--"
+    tput rc
+    tput ed
+    done
 done
