@@ -11,7 +11,7 @@ LOG_FILE="/usr/local/osinstall.log"
 
 trap 'onCtrlC' INT
 function onCtrlC () {
-  echo -e '\nyou can umount u-disk now...'
+  echo -e '\nYou can unplug u-disk now, then reboot...'
   exit 0
 }
 
