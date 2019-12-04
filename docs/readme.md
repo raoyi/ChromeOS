@@ -1,6 +1,6 @@
 # Script List
 
-<p align="value">Latest version: 20191204</p>
+**Latest version: 20191204**
 
 [bin2u.sh](https://raw.githubusercontent.com/raoyi/chromeos/master/script/bin2u.sh) - create ChromeOS-install u-disk in Ubuntu Linux.
 
