@@ -14,3 +14,5 @@
 
 [stress_tool/cold_boot.conf](https://raw.githubusercontent.com/raoyi/chromeos/master/script/stress_tool/cold_boot.conf) - cold-boot configure file.
 
+****
+[offical developer guide mirror](./developer_guide.md)
