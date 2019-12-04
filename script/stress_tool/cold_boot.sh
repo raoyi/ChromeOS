@@ -4,7 +4,7 @@
 # Email: hi@raoyi.net
 # USED FOR AUTO STRESS COLD_BOOT TEST.
 # Usage:
-# Please refer to description document.
+# Please refer to the manual.
 
 . /usr/share/misc/shflags
 
