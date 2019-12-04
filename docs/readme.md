@@ -1,6 +1,6 @@
 # Script List
 
-[bin2u.sh](https://raw.githubusercontent.com/raoyi/chromeos/master/script/bin2u.sh) - create ChromeOS-install u-disk in Linux.
+[bin2u.sh](https://raw.githubusercontent.com/raoyi/chromeos/master/script/bin2u.sh) - create ChromeOS-install u-disk in Ubuntu Linux.
 
 [loop_install.sh](https://raw.githubusercontent.com/raoyi/chromeos/master/script/loop_install.sh) - auto chromeos-install script.
 
