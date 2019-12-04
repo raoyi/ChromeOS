@@ -4,7 +4,7 @@
 # Email: hi@raoyi.net
 # USED FOR AUTO STRESS TEST MAIN.
 # Usage:
-# Please refer to description document.
+# Please refer to the manual.
 
 clear
 echo
