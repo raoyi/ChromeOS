@@ -4,7 +4,7 @@
 
 [loop_install.sh](https://raw.githubusercontent.com/raoyi/chromeos/master/script/loop_install.sh) - auto chromeos-install script.
 
-[stress_tool.zip](./stress_tool.zip) - auto-stress tool.
+[stress_tool.zip](./stress_tool.zip) - auto-stress tool (archive).
 
 [stress_tool/stress_auto.sh](https://raw.githubusercontent.com/raoyi/chromeos/master/script/stress_tool/stress_auto.sh) - auto stress main file.
 
