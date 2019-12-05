@@ -16,18 +16,25 @@ else
 fi
 
 # get u-disk volume
-echo "Please choose correct u-disk volume..."
 var=$(ls /dev/sd[a-h])
 OLD_IFS="$IFS"
 IFS=" "
 var=($var)
 IFS="$OLD_IFS"
+vol_int=0
 for s in ${var[a]}
 do
   num=${s#*sd}
   echo $num": "$s
+  let "vol_int++"
 done
-read num
+
+if [ $vol_int == 1 ]
+then
+  num=$num
+else
+  read -p "Please choose correct u-disk volume: " num
+fi
 
 # check and install pv
 dpkg -V pv
