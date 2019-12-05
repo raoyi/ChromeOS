@@ -1,7 +1,5 @@
 # Script List
 
-**Latest version: 20191204**
-
 [bin2u.sh](https://raw.githubusercontent.com/raoyi/chromeos/master/script/bin2u.sh) - create ChromeOS-install u-disk in Ubuntu Linux.
 
 [loop_install.sh](https://raw.githubusercontent.com/raoyi/chromeos/master/script/loop_install.sh) - auto chromeos-install script.
@@ -14,5 +12,12 @@
 
 [stress_tool/cold_boot.conf](https://raw.githubusercontent.com/raoyi/chromeos/master/script/stress_tool/cold_boot.conf) - cold-boot configure file.
 
-****
-[offical developer guide mirror](./developer_guide.md)
+# Offical document mirror
+
+**Latest version: 20191204**
+
+[developer guide](./developer_guide.md)
+
+# Third-party document
+
+[overview](https://www.itread01.com/content/1547969584.html)
