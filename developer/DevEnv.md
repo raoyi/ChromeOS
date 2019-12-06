@@ -4,6 +4,8 @@
 
 - Ubuntu Linux (version 18.04 - Bionic Beaver)
 - 64bit
+- 不少于8GB的内存
+- 网络良好（能连Google）
 
 **命令标识：**
 ```
