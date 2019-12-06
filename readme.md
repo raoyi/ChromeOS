@@ -1,4 +1,6 @@
-# Script List
+#### [Script list](#script-list) | [Offical docs mirror](#offical-docs-mirror) | [Self-written docs](#self-written-docs) | [Third-party docs](#third-party-docs)
+
+# Script list
 
 [bin2u_v2.sh](https://raw.githubusercontent.com/raoyi/chromeos/master/script/bin2u_v2.sh) - create ChromeOS-install u-disk in Ubuntu Linux.
 
@@ -10,18 +12,21 @@
 
 [stress_tool/cold_boot.conf](https://raw.githubusercontent.com/raoyi/chromeos/master/script/stress_tool/cold_boot.conf) - cold-boot configure file.
 
-# Offical document mirror
+# Offical docs mirror
 
 [developer guide](./developer/developer_guide.md) **sync @ 20191204**
 
 # Self-written docs
 
-[stress_tool_user_guide](./script/stress_tool/stress_tool_user_guide.md) - stress tool user guide.
+[stress tool user guide](./script/stress_tool/stress_tool_user_guide.md) - stress tool user guide.
 
-[DevEnv.md](./developer/DevEnv.md) - development environment building document.
+[DevEnv](./developer/DevEnv.md) - development environment building document.
 
-[source.md](./developer/source.md) - chromiumos documents and source links.
+[source](./developer/source.md) - chromiumos documents and source links.
 
-# Third-party document
+[playground](./developer/playground.md) - dev summary.
+
+# Third-party docs
 
 [overview](https://blog.csdn.net/Arthur_02_13/article/details/54286013)
+
