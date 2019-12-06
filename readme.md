@@ -1,5 +1,3 @@
-#### [Script list](#script-list) | [Offical docs mirror](#offical-docs-mirror) | [Self-written docs](#self-written-docs) | [Third-party docs](#third-party-docs)
-
 # Script list
 
 [bin2u_v2.sh](https://raw.githubusercontent.com/raoyi/chromeos/master/script/bin2u_v2.sh) - create ChromeOS-install u-disk in Ubuntu Linux.
