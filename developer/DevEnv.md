@@ -2,7 +2,7 @@
 
 ## 系统要求：
 
-- Ubuntu Linux (version 16.04 - Xenial)
+- Ubuntu Linux (version 18.04 - Bionic Beaver)
 - 64bit
 
 **命令标识：**
