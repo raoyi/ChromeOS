@@ -2,8 +2,8 @@
 
 ## 系统要求：
 
-- Ubuntu Linux (version 18.04 - Bionic Beaver)
-- 64bit
+- Ubuntu Linux (version 18.04 - Bionic Beaver) x64
+- sudo权限
 - 不少于8GB的内存
 - 网络良好（能连Google）
 
