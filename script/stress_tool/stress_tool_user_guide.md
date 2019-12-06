@@ -1,3 +1,5 @@
+# stress tool user guide
+
 1. mount /dev/sdX1 /media
 
 2. cp -R /media/stress_tool /usr/local/
