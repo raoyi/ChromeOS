@@ -1,6 +1,6 @@
 # 开发环境搭建笔记
 
-## 系统要求：
+### 系统要求：
 
 - Ubuntu Linux (version 18.04 - Bionic Beaver) x64
 - sudo权限
