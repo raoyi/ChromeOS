@@ -12,7 +12,7 @@ if [ ! -n "$1" ]
   then
   read -p "Please input the binary file path: " bin_path
 else
-  $bin_path=$1
+  bin_path=$1
 fi
 
 # get u-disk volume
