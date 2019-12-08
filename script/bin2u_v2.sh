@@ -43,7 +43,7 @@ if [ $? == 1 ]
     sudo apt install -y pv
     if [ $? != 0 ]
       then
-        echo -e "\ninstall pv fail! press Ctrl+C and check network connection.\n\nOr wait 5 seconds to start without progress bar..."
+        echo -e "\n\033[31mInstall pv fail! press Ctrl+C and check network connection.\n\nOr wait 5 seconds to start without progress bar...\033[m"
       wait_sec=5
       tput sc
       while [ $wait_sec -gt 0 ]
@@ -67,4 +67,4 @@ if [ $status == 1 ]
 fi
 
 sync
-echo "finished! You can unplug u-disk now..."
+echo -e "\033[32mFinished! You can unplug u-disk now...\033[m"

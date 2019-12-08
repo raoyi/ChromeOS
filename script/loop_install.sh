@@ -23,7 +23,7 @@ for i in `seq 1 $ins_times`
   chromeos-install --yes
   echo "[`date`] install $i times end" >> ${LOG_FILE};
   wait_sec=30
-  echo "you can press ctrl+C to stop in ${wait_sec} seconds."
+  echo -e "\033[31m You can press Crl+C to stop in ${wait_sec} seconds.\033[m"
   tput sc
   while [ $wait_sec -gt 0 ]
     do
