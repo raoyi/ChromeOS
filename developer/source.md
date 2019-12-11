@@ -12,6 +12,7 @@
 |AVL test and qualification|https://chromeos.google.com/partner/dlm/docs/component-qual/componentqualtests.html|
 |KB region code|https://chromium.googlesource.com/chromiumos/platform2/+/refs/heads/master/regions/regions.py#213|
 |Servo V4 Overview|https://chromeos.google.com/partner/dlm/docs/factory/servoV4GuideOverview.html|
+|Servo|https://chromium.googlesource.com/chromiumos/third_party/hdctools/+/refs/heads/master/docs/servo.md|
 |Moblab|https://www.chromium.org/chromium-os/testing/moblab|
 |Prepare Moblab|https://www.chromium.org/chromium-os/testing/moblab-landing/prepare-moblab|
 |Moblab Introduction & Use Manual|https://docs.google.com/document/d/e/2PACX-1vQKDTDTQFKjNxJatFkFUSjCPdVzgry9vkLLvxL8vwqasrKMP2KReEMZ3iva9GX8EzQYo-kANnzPlFG_/pub|
