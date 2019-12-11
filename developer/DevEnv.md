@@ -101,9 +101,21 @@ repo init -u https://chromium.googlesource.com/chromiumos/manifest.git --repo-ur
 repo sync -j4
 ```
 
-### step9. END
+### step9. 进入开发环境
 ```
 (outside)
 cros_sdk
 ```
 
+### step10. 设置
+```
+(inside)
+sudo emerge hdctools
+setup_board --board=octopus
+```
+
+### step11. servo
+连接servo board，执行命令连接
+```
+sudo servod -b octopus_npcx
+```
