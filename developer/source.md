@@ -12,6 +12,8 @@
 |AVL test and qualification|https://chromeos.google.com/partner/dlm/docs/component-qual/componentqualtests.html|
 |KB region code|https://chromium.googlesource.com/chromiumos/platform2/+/refs/heads/master/regions/regions.py#213|
 |Moblab|https://www.chromium.org/chromium-os/testing/moblab|
+|Prepare Moblab|https://www.chromium.org/chromium-os/testing/moblab-landing/prepare-moblab|
+|Moblab Introduction & Use Manual|https://docs.google.com/document/d/e/2PACX-1vQKDTDTQFKjNxJatFkFUSjCPdVzgry9vkLLvxL8vwqasrKMP2KReEMZ3iva9GX8EzQYo-kANnzPlFG_/pub|
 |Chrome OS release Schedule|https://chromiumdash.appspot.com/schedule|
 |Registration Codes Request|https://www.google.com/chromeos/partner/fe/#code_generation|
 |Registration Implementation Guide|https://chromeos.google.com/partner/dlm/docs/factory/factoryregistrationguide.html#vpd-command|
