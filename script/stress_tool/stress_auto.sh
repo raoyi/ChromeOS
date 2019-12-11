@@ -49,7 +49,7 @@ if [ $s3_cycle != 0 ]
       then 
         rm "/usr/local/s3.log"
     fi
-    suspend_stress_test -c $s3_cycle --suspend_min=15 --suspend_max=20 >> /usr/local/s3.log
+    suspend_stress_test -c $s3_cycle >> /usr/local/s3.log
 fi
 
 if [ $cb_cycle != 0 ]
