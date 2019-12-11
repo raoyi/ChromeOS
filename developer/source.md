@@ -13,6 +13,7 @@
 |KB region code|https://chromium.googlesource.com/chromiumos/platform2/+/refs/heads/master/regions/regions.py#213|
 |Servo V4 Overview|https://chromeos.google.com/partner/dlm/docs/factory/servoV4GuideOverview.html|
 |Servo|https://chromium.googlesource.com/chromiumos/third_party/hdctools/+/refs/heads/master/docs/servo.md|
+|Servo v4 CCD Setup (Shared externally)|https://docs.google.com/document/d/1aS_bJmk-vF-wcBsnyNiNrj9uuFc-GuX6BGp-RuXtWYo/edit#heading=h.3vehgnw8ykj4|
 |Moblab|https://www.chromium.org/chromium-os/testing/moblab|
 |Prepare Moblab|https://www.chromium.org/chromium-os/testing/moblab-landing/prepare-moblab|
 |Moblab Introduction & Use Manual|https://docs.google.com/document/d/e/2PACX-1vQKDTDTQFKjNxJatFkFUSjCPdVzgry9vkLLvxL8vwqasrKMP2KReEMZ3iva9GX8EzQYo-kANnzPlFG_/pub|
