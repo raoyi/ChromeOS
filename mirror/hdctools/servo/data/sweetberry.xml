@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<root>
+  <include>
+    <name>common.xml</name>
+  </include>
+  <control>
+    <name>raw_sweetberry_console_pty</name>
+    <doc>Sweetberry's stm32 console.</doc>
+    <params cmd="get" subtype="pty" interface="3" drv="uart">
+    </params>
+  </control>
+</root>

@@ -1,0 +1,9 @@
+*.pyc
+*.par
+build
+shopfloor_data
+.tests-passed
+overlay-*
+go/bin
+go/pkg
+*.venv

@@ -1,0 +1,120 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# Copyright 2018 The Chromium OS Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+"""A script for previewing rendering of docs in Gitiles."""
+
+from __future__ import print_function
+
+import argparse
+import logging
+import os
+import shutil
+import subprocess
+import sys
+import tempfile
+import webbrowser
+
+SCRIPT_NAME = 'preview_docs'
+COMMIT_MSG = 'Preview files\n\nCreated by %s.' % SCRIPT_NAME
+
+REMOTE_NAMES = ('cros', 'cros-internal', 'origin')
+GERRIT_URL_FRAGMENT = '-review.googlesource.com'
+GITILES_URL_FRAGMENT = '.googlesource.com'
+
+
+def die(msg, *args):
+    """Log the given message and exit."""
+    logging.fatal(msg, *args)
+    sys.exit(1)
+
+
+def git(*args):
+    """Run git with given arguments, returning the output."""
+    logging.debug('git %r', args)
+    output = subprocess.check_output(('git',) + args, encoding='utf-8').strip()
+    if output:
+        logging.debug('> %s', output)
+    return output
+
+
+def main(argv):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('file', nargs='+')
+    parser.add_argument('--verbose', action='store_true')
+    opts = parser.parse_args(argv)
+
+    # Configure logging.
+    log_level = logging.INFO
+    if opts.verbose:
+        log_level = logging.DEBUG
+    logging.basicConfig(level=log_level)
+    logging.root.name = SCRIPT_NAME
+
+    # Get USER.
+    user = os.environ.get('USER')
+    if not user or user == 'root':
+        die('Need a non-root USER in the environment.')
+
+    # Get the current subdirectory within the git repo.
+    git_prefix = git('rev-parse', '--show-prefix')
+
+    # Get/transform remote URL.
+    remote_url = None
+    for remote_name in REMOTE_NAMES:
+        try:
+            remote_url = git('remote', 'get-url', '--push', remote_name)
+            if (GITILES_URL_FRAGMENT in remote_url or
+                    GERRIT_URL_FRAGMENT in remote_url):
+                break
+        except subprocess.CalledProcessError:
+            # The remote name isn't configured (probably).
+            pass
+    else:
+        die("Couldn't find a remote that looks like a Gitiles URL.")
+
+    temp_dir = tempfile.mkdtemp(SCRIPT_NAME)
+    try:
+        # Avoid mucking around with the user's actual index.
+        os.environ['GIT_INDEX_FILE'] = os.path.join(temp_dir, 'index')
+
+        files = list(opts.file)
+
+        # Include /navbar.md if present.
+        git_root = git('rev-parse', '--show-cdup')
+        navbar_path = os.path.join(git_root, 'navbar.md')
+        if os.path.isfile(navbar_path):
+            files.append(navbar_path)
+
+        # Create a commit with just the target files.
+        git('add', '--', *files)
+        tree = git('write-tree')
+        commit = git('commit-tree', '-m', COMMIT_MSG, tree)
+
+        # Push the commit to a specific user-scoped sandbox ref.
+        git('push', '-f', '--no-verify', remote_url,
+            '%s:refs/sandbox/%s/%s' % (commit, user, SCRIPT_NAME))
+
+        # Build the preview URL.
+        gitiles_url = remote_url.replace(GERRIT_URL_FRAGMENT,
+                                         GITILES_URL_FRAGMENT, 1)
+        gitiles_url += '/+/%s/%s' % (commit, git_prefix)
+        if len(opts.file) == 1:
+            gitiles_url += opts.file[0]
+        print('Preview URL:', gitiles_url)
+
+        # Attempt to open in a browser.
+        try:
+            webbrowser.open(gitiles_url)
+        except webbrowser.Error:
+            # Opening the browser is optional and could fail for many reasons.
+            pass
+
+    finally:
+        shutil.rmtree(temp_dir)
+
+
+if __name__ == '__main__':
+    sys.exit(main(sys.argv[1:]))

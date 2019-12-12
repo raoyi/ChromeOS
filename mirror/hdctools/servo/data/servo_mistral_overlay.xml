@@ -1,0 +1,47 @@
+<root>
+  <include>
+    <name>servoflex_cosmos.xml</name>
+  </include>
+  <include>
+    <name>usb_kb_main_kb.xml</name>
+  </include>
+  <control>
+    <name>lid_open</name>
+    <doc>fake lid for products without one</doc>
+    <params interface="servo" drv="na" init="not_applicable"
+    clobber_ok=""></params>
+  </control>
+  <control>
+    <name>power_state</name>
+    <doc>Used to turn the DUT off and on</doc>
+    <params cmd="set" interface="servo" drv="storm_power"
+    input_type="str" reset_hold="0.7" rec_detection="30"/>
+  </control>
+  <control>
+    <name>ec_board</name>
+    <doc>The board name of the EC image</doc>
+    <params interface="servo" drv="na" init="not_applicable"
+    clobber_ok=""></params>
+  </control>
+  <!-- FORCE_USB_BOOT on Y-flex cable is mapped to hpd on pin 39, so remap
+       dev_mode to hpd
+  -->
+  <control>
+    <name>hpd</name>
+    <remap>dev_mode</remap>
+  </control>
+  <!-- To avoid disabling atmega Keyboard on servo_v4 as part of servo_repair.
+       Init atmega_rst to off
+  -->
+  <control>
+    <name>atmega_rst</name>
+    <doc>ATMEL_RESET_L: reset atmega</doc>
+    <params clobber_ok="" init="off"></params>
+  </control>
+  <control>
+    <name>chassis_open</name>
+    <doc>chassis_open</doc>
+    <params interface="2" drv="tca6416" slv="0x20" od="PP" port="1"
+    offset="4" map="yesno" init="no"></params>
+  </control>
+</root>

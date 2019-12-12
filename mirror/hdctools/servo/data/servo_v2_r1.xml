@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<root>
+  <!-- ============================================================= -->
+  <!-- This XML provides additional controls added to servo_v2 rev1. -->
+  <!-- ============================================================= -->
+  <include>
+    <name>servo_v2_r0.xml</name>
+  </include>
+  <!-- ********** Maps ********** -->
+  <map>
+    <name>vref_sel0</name>
+    <doc>Determine VREF between pp3300, pp2500, pp1800 and off.
+    Default is off</doc>
+    <params pp3300="0" pp2500="1" pp1800="0" off="1"></params>
+  </map>
+  <map>
+    <name>vref_sel1</name>
+    <doc>Determine VREF between pp3300, pp2500, pp1800 and off.
+    Default is off</doc>
+    <params pp3300="0" pp2500="0" pp1800="1" off="1"></params>
+  </map>
+  <!-- ********** Controls ********** -->
+  <control>
+    <name>image_usbkey_dev</name>
+    <doc>Get USB dev attached to this servo</doc>
+    <params subtype="image_usbkey_dev" interface="servo"
+    drv="usb_image_manager" hub_port="6" usb_power_off_delay="2"
+    error_amendment="Make sure you are using the usb port sticking veritically
+    out of the servo v2, close to the host usb micro.">
+    </params>
+  </control>
+  <control>
+    <name>init_usb_keyboard</name>
+    <doc>initialize usb keyboard handler</doc>
+    <params init_atmega_uart="" map="onoff" init="off" drv="kb_handler_init"
+      subtype="init_usb_keyboard" interface="servo"></params>
+  </control>
+  <control>
+    <name>uart3_vref</name>
+    <doc>uart3_vref</doc>
+    <params interface="2" drv="tca6416" slv="0x22" port="0"
+    offset="1" width="2" map="vref_sel" init="off"></params>
+  </control>
+  <control>
+    <name>jtag_vref_sel0</name>
+    <doc>jtag_vref_sel0</doc>
+    <params interface="2" drv="tca6416" slv="0x24" port="0"
+    offset="2" map="vref_sel0" init="off"></params>
+  </control>
+  <control>
+    <name>jtag_vref_sel1</name>
+    <doc>jtag_vref_sel1</doc>
+    <params interface="2" drv="tca6416" slv="0x24" port="0"
+    offset="5" map="vref_sel1" init="off"></params>
+  </control>
+  <control>
+    <name>usbpd_uart_routing</name>
+    <doc>override enable pd uart routing</doc>
+    <params interface="servo" drv="na" input_type="str"
+    clobber_ok=""></params>
+  </control>
+</root>
