@@ -50,9 +50,13 @@ echo
 #logging function
 function log(){
   if [ $cap == $precap ];then
-    if [ $logline == 0 -o $logline == 1 ];then
+    if [ $logline == 0 ];then
       echo "capacity: $start_cap -> $cap - $(date +"%Y-%m-%d %H:%M:%S") - spended: $[ (`date +%s` - $start_time) / 60 ] minutes - $(state)" >> ${LOG_FILE}
-      let "logline++"
+      logline=1
+
+    elif [ $logline == 1 ];then
+      echo "capacity: $start_cap -> $cap - $(date +"%Y-%m-%d %H:%M:%S") - spended: $[ (`date +%s` - $start_time) / 60 ] minutes - $(state)" >> ${LOG_FILE}
+      logline=2
 
     elif [ $logline == 2 ];then
       sed -n '$p' ${LOG_FILE} | grep $(state)
