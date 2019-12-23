@@ -4,7 +4,9 @@
 
 [loop_install.sh](https://raw.githubusercontent.com/raoyi/chromeos/master/script/loop_install.sh) - auto chromeos-install script.
 
-[cap.sh](https://raw.githubusercontent.com/raoyi/chromeos/master/script/cap.sh) - battery capacity logging tool.
+[cap.sh](https://raw.githubusercontent.com/raoyi/chromeos/master/script/cap_v3/cap.sh) - battery capacity logging tool for VT1.
+
+[readme for cap.sh](https://raw.githubusercontent.com/raoyi/chromeos/master/script/cap_v3/readme.md)
 
 [cap_v2.sh](https://raw.githubusercontent.com/raoyi/chromeos/master/script/cap_v2.sh) - battery capacity logging tool(mini log).
 
@@ -29,4 +31,3 @@
 # Third-party docs
 
 [overview](https://blog.csdn.net/Arthur_02_13/article/details/54286013)
-
