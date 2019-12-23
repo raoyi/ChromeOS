@@ -6,7 +6,7 @@
 
 [cap.sh](https://raw.githubusercontent.com/raoyi/chromeos/master/script/cap_v3/cap.sh) - battery capacity logging tool for VT1.
 
-[readme for cap.sh](https://raw.githubusercontent.com/raoyi/chromeos/master/script/cap_v3/readme.md)
+[readme for cap.sh](../script/cap_v3/readme.md)
 
 [cap_v2.sh](https://raw.githubusercontent.com/raoyi/chromeos/master/script/cap_v2.sh) - battery capacity logging tool(mini log).
 
