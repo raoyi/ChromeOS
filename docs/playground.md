@@ -1,4 +1,4 @@
-#常用命令相关
+# 常用命令相关
 1. crossystem 查看host版本（或者在开机叹号位置按 `Tab` 键2次）
 2. ectool version 查看ec版本
 3. 查看硬件信息：
