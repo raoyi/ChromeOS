@@ -1,3 +1,4 @@
+#常用命令相关
 1. crossystem 查看host版本（或者在开机叹号位置按 `Tab` 键2次）
 2. ectool version 查看ec版本
 3. 查看硬件信息：
@@ -13,3 +14,23 @@ lsblk	# 硬盘（EMMC/SSD）信息
 8. ctrl+alt+? 调出快捷键列表
 9. test image在BIOS、EC、firmware版本匹配的前提下，normal mode可以进VT2，此时set GBB 0x0为normal mode，0x39为开发模式
 10. ctrl+鼠标左键 循环播放视频，操作鼠标键盘自动退出循环播放
+11. 查看VPD信息
+```
+vpd -i RO_VPD -l
+vpd -i RW_VPD -l
+```
+12. 保存VPD信息成bin文件
+```
+flashrom -p host -r -i RO_VPD:/tmp/vpd-ro.bin
+flashrom -p host -r -i RW_VPD:/tmp/vpd-rw.bin
+```
+14. 刷BIOS / EC
+```
+flashrom -p host -w <bios文件>
+flashrom -p ec -w <ec文件>
+```
+13. 从bin文件中restore VPD信息
+```
+flashrom -p host -w -i RO_VPD:/tmp/vpd-ro.bin --fast-verify
+flashrom -p host -w -i RW_VPD:/tmp/vpd-rw.bin --fast-verify
+```
