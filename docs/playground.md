@@ -34,3 +34,12 @@ flashrom -p ec -w <ec文件>
 flashrom -p host -w -i RO_VPD:/tmp/vpd-ro.bin --fast-verify
 flashrom -p host -w -i RW_VPD:/tmp/vpd-rw.bin --fast-verify
 ```
+14. build packages的命令
+```
+(inside)
+./build_packages --board=${BOARD} --accept_licenses="Google-TOS" --autosetgov
+```
+15. 改CBI
+```
+ectool cbi set 2 1 1 0  (改成SKU1)
+```
