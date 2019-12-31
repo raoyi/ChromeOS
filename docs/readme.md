@@ -24,7 +24,7 @@
 
 [source](./source.md) - chromiumos documents and source links.
 
-[playground](./playground.md) - dev summary.
+[notes](./notes.md) - dev summary.
 
 [ChromebookShortcutKeys](./ChromebookShortcutKeys.md) - chromebook shortcut keys.
 
