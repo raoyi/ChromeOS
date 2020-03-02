@@ -15,10 +15,10 @@
     }
 </style>
 <body>
-    <article style="border:1px solid white;width:400px;height:400px;margin:0 auto;background-color:white;">
+    <article style="border:1px solid white;width:1330px;height:800px;margin:0 auto;background-color:white;">
 
-        <section class="experiment" style="width:320px; height:240px;border:1px solid green; margin:50px auto;">
-            <div id="videos-container" style="width:320px; height:240px;">
+        <section class="experiment" style="width:1280px; height:720px;border:1px solid green; margin:50px auto;">
+            <div id="videos-container" style="width:1280px; height:720px;">
             </div>
         </section>
         <section class="experiment" style="text-align:center;border:none; margin-top:20px;">
@@ -26,6 +26,7 @@
             <button id="start-recording" disabled>开始录制</button>
             <button id="save-recording" disabled>保存</button>
             <!--<a href="javascript:void(0)" onclick="send()">发送</a>-->
+<p>建议使用Chrome浏览器</p>
         </section>
  </article>
 <script>
@@ -63,8 +64,8 @@
 
                 var video = document.createElement('video');
 
-                var videoWidth = 320;
-                var videoHeight = 240;
+                var videoWidth = 1280;
+                var videoHeight = 720;
 
                 video.controls = false;
                 video.muted = true;

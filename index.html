@@ -1,7 +1,8 @@
+<p>建议使用Chrome浏览器</p>
 <p>
- <button onclick="openMedia()">open</button>
- <button onclick="closeMedia()">close</button>
- <button onclick="drawMedia()">screenshot</button>
+ <button onclick="openMedia()">打开</button>
+ <button onclick="closeMedia()">关闭</button>
+ <button onclick="drawMedia()">截图</button>
 </p>
 <video id="video" class="bg"></video>
 <canvas id="qr-canvas"></canvas>
@@ -39,7 +40,7 @@
  // video: { facingMode: { exact: "environment" } }// 或者 "user"
  }
  
- // 回调
+ //回调
  function successFunc(stream) {
  mediaStreamTrack = stream;
  video = document.querySelector('video');
