@@ -1,1 +1,0 @@
-this is a web-cam app.
